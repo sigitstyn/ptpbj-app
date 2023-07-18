@@ -8,7 +8,7 @@ import { Evaluasi2Component } from './evaluasi2/evaluasi2.component';
 import { Uraian2Component } from './uraian2/uraian2.component';
 import { Uraian1Component } from './uraian1/uraian1.component';
 const routes: Routes = [
-  {path: 'https://ptpbj.netlify.app/pengertian-web', component: PengertianWebComponent},
+  {path: 'pengertian-web', component: PengertianWebComponent},
   {path: 'gladhen1', component: Gladhen1Component},
   {path: 'gladhen2', component: Gladhen2Component},
   {path: 'evaluasi1', component: Evaluasi1Component},
