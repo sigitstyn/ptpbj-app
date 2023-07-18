@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladhen 2</title>
+    <style>
+      
+  
+      .container {
+          background-color: white; /* Ganti warna latar belakang sesuai keinginan Anda */
+          .judul{
+              background-image: linear-gradient(to right, #3a7ada 40%, #4de8fc);
+              font-family: Helvetica;
+              color: whitesmoke;
+              box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5);
+             
+          }
+      }
+      
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="judul display-6 p-md-4 mb-4 rounded  text-center">Gladhen 2</h3>
+            <hr>
+      <!-- 1-3 -->
+      <div class="perintah col-md-12 text-body-emphasis">
+            <h6>
+                Wacan kanggo mangsuli pitakon angka 1-3
+            </h6>
+            <p class="col-md-7 text-align text-body-emphasis"> 
+                Kaya biyasane, esuk-esuk ngene iki Vina wis tangi turu. Dheweke cepet-cepet njupuk sapu kanggo nyapu latar. 
+                Kegiyatan kasebut wis dadi kewajibane Vina saben dina. Dheweke eling bab kerepotan ibune.
+            </p>
+      </div> 
+      <div class="conversation text-body-emphasis col-md-8">
+            <table >
+              <tbody>
+                <tr>
+                  <td width="50px"><b>Ibu</b></td>
+                  <td>:</td>
+                  <td>“Wis rampung durung Vin, enggala mangkat sekolah, wis jam nem lho.”</td>
+                </tr>
+                <tr>
+                  <td><b>Vina</b></td>
+                  <td>:</td>
+                  <td>“Sampun Bu, menika nembe mendhet sekul kangge sangu sekolah.”</td>
+                </tr>
+              </tbody>
+              </table>
+              
+                <p>
+                    (Vina nyawang ibune kang lagi umbah-umbah klambi titipan tanggane)
+                </p>
+              <table>
+                <tbody>
+                <tr>
+                  <td width="50px"><b>Vina</b></td>
+                  <td>:</td>
+                  <td>“Bu, kula mawon ingkang umbah-umbah, ibu kendel rumiyin.”</td>
+                </tr>
+                <tr>
+                  <td><b>Ibu</b></td>
+                  <td>:</td>
+                  <td>“Ora usah Ndhuk, kowe sekolah wae sing sregep, supaya mbesuk yen gedhe
+                    uripmu ben kepenak, ora rekasa kaya ibu.”
+                    </td>
+                </tr>
+                <tr>
+                  <td><b>Vina</b></td>
+                  <td>:</td>
+                  <td>“Inggih, Bu.” </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="col-md-12 text-body-emphasis">
+            <h6 class="A">
+                A. Wangsulana pitakon-pitakon iki kanthi cara menehi tandha ping (X) ing aksara a, b, c, 
+                utawa d kang kaanggep bener !
+            </h6>
+            
+      </div> 
+      <div *ngFor="let quiz of quizzes">
+        <h6 class="soal">{{ quiz.question }}</h6>
+        <ul>
+          <li *ngFor="let option of quiz.options" style="list-style: none; margin-left: 13px;">
+            <label [ngClass]="{
+              'correct-answer': option === quiz.answer && showExplanation && (option === userAnswers[quiz.question]),
+              'wrong-answer': option === userAnswers[quiz.question] && showExplanation && (option !== quiz.answer)
+            }">
+              <input
+                type="radio"
+                name="{{ quiz.question }}"
+                [value]="option"
+                (change)="selectOption(quiz.question, option)"
+                [disabled]="showExplanation"
+                [checked]="option === userAnswers[quiz.question]"
+              >
+              {{ option }}
+            </label>
+          </li>
+        </ul>
+        <div class="pembahasan col-md-10" *ngIf="showExplanation" >
+          <p>
+            <b>
+              Jawaban :
+            </b> {{quiz.answer}}
+          </p>
+          <p >
+            <b>Pembahasan :</b>
+            <br>
+            {{ quiz.explanation }}
+          </p>
+        </div>
+      </div>
+      <hr>
+
+    <!-- 4-5 -->
+      <div class="perintah col-md-12 text-body-emphasis">
+        <h6>
+            Wacan kanggo mangsuli pitakon angka 4-5
+        </h6>
+        <p class="col-md-7 text-align text-body-emphasis"> 
+          Esuk kuwi Mbah Slamet nyawang lemah mburi omah, warisan saka bapak ibune kawit jaman biyen.
+        </p>
+      </div> 
+      <div class="conversation text-body-emphasis col-md-8">
+        <table >
+          <tbody>
+            <tr>
+              <td width="110px"><b>Mbah Slamet</b></td>
+              <td>:</td>
+              <td>“Lan, Wulan, mrenea.”</td>
+            </tr>
+            <tr>
+              <td><b>Wulan</b></td>
+              <td>:</td>
+              <td>“Wonten napa, Pak dhe?”</td>
+            </tr>
+            <tr>
+              <td><b>Mbah Slamet</b></td>
+              <td>:</td>
+              <td>“Ndhuk, apa bener yen lemah tinggalane simbah kuwi diaku jare nduweke angkatan laut, lan prakara iki tekan pengadilan?”</td>
+            </tr>
+            <tr>
+              <td><b>Wulan</b></td>
+              <td>:</td>
+              <td>“Inggih, Dhe, lajeng ingkang menangaken menika pihak angkatan laut.”</td>
+            </tr>
+          </tbody>
+          </table>
+          
+      </div>
+      <div *ngFor="let quiz of quizzes2">
+        <h6 class="soal">{{ quiz.question }}</h6>
+        <ul>
+          <li *ngFor="let option of quiz.options" style="list-style: none; margin-left: 13px;">
+            <label [ngClass]="{
+              'correct-answer': option === quiz.answer && showExplanation && (option === userAnswers[quiz.question]),
+              'wrong-answer': option === userAnswers[quiz.question] && showExplanation && (option !== quiz.answer)
+            }">
+              <input
+                type="radio"
+                name="{{ quiz.question }}"
+                [value]="option"
+                (change)="selectOption(quiz.question, option)"
+                [disabled]="showExplanation"
+                [checked]="option === userAnswers[quiz.question]"
+              >
+              {{ option }}
+            </label>
+          </li>
+        </ul>
+        <div class="pembahasan col-md-10" *ngIf="showExplanation" >
+          <p>
+            <b>
+              Jawaban :
+            </b> {{quiz.answer}}
+          </p>
+          <p >
+            <b>Pembahasan :</b>
+            <br>
+            {{ quiz.explanation }}
+          </p>
+        </div>
+      </div>
+      <hr>
+
+    <!-- 6-8 -->
+    <div class="perintah col-md-12 text-body-emphasis">
+      <h6>
+          Wacan kanggo mangsuli pitakon angka 6-8
+      </h6>
+      <p class="col-md-7 text-align text-body-emphasis"> 
+        Nalika jam pasinaon basa Jawa, Aldo mara ing kantor guru amarga Bu Tina durung rawuh. Ing kantor guru, dheweke ketemu guru kang piket dina kuwi banjur dikandhani yen Bu Tina ora rawuh amarga gerah. Banjur kelas VII A didhawuhi nggarap buku paket supaya pasinaon basa Jawa tetep mlaku lan siswa ora rame.
+      </p>
+    </div> 
+    <div class="conversation text-body-emphasis col-md-8">
+      <table >
+        <tbody>
+          <tr>
+            <td width="50px"><b>Aldo</b></td>
+            <td>:</td>
+            <td>“Kanca-kanca, amarga Bu Tina ora rawuh, kanggo pasinaon basa Jawa dina iki nggarap buku paket kaca 68 nganti 70.”</td>
+          </tr>
+          <tr>
+            <td><b>Ria</b></td>
+            <td>:</td>
+            <td>“Bu Tina ora rawuh ta, Do?”</td>
+          </tr>
+          <tr>
+            <td><b>Aldo</b></td>
+            <td>:</td>
+            <td>“Ora, Bu Tina lagi gerah neng rumah sakit.”</td>
+          </tr>
+          <tr>
+            <td><b>Doni</b></td>
+            <td>:</td>
+            <td>“Tenane? Gerah apa ta kok nganti neng rumah sakit?”</td>
+          </tr>
+          <tr>
+            <td><b>Aldo</b></td>
+            <td>:</td>
+            <td>“Ngendikane Bu Rini, Bu Tina gerah tipes. Wis ayo ndang digarap, amarga
+              tugase mengko tetep dikumpulake neng kantor guru.”
+              </td>
+          </tr>
+        </tbody>
+        </table>
+        
+    </div>
+    <div *ngFor="let quiz of quizzes3">
+      <h6 class="soal">{{ quiz.question }}</h6>
+      <ul>
+        <li *ngFor="let option of quiz.options" style="list-style: none; margin-left: 13px;">
+          <label [ngClass]="{
+            'correct-answer': option === quiz.answer && showExplanation && (option === userAnswers[quiz.question]),
+            'wrong-answer': option === userAnswers[quiz.question] && showExplanation && (option !== quiz.answer)
+          }">
+            <input
+              type="radio"
+              name="{{ quiz.question }}"
+              [value]="option"
+              (change)="selectOption(quiz.question, option)"
+              [disabled]="showExplanation"
+              [checked]="option === userAnswers[quiz.question]"
+            >
+            {{ option }}
+          </label>
+        </li>
+      </ul>
+      <div class="pembahasan col-md-10" *ngIf="showExplanation" >
+        <p>
+          <b>
+            Jawaban :
+          </b> {{quiz.answer}}
+        </p>
+        <p >
+          <b>Pembahasan :</b>
+          <br>
+          {{ quiz.explanation }}
+        </p>
+      </div>
+    </div>
+    <hr>
+
+    <!-- 9-10 -->
+    <div class="perintah col-md-12 text-body-emphasis">
+      <h6>
+          Wacan kanggo mangsuli pitakon angka 9-10
+      </h6>
+    </div> 
+    <div class="conversation text-body-emphasis col-md-8">
+      <table >
+        <tbody>
+          <tr>
+            <td width="50px"><b>Ibu</b></td>
+            <td>:</td>
+            <td>“Mula ta, Le, yen dikandhani wong tuwa kuwi manut. Dolanan hp kuwi sing ngerti wayah, yen matane wis lara ngene iki ya kowe dhewe ta sing susah. ”</td>
+          </tr>
+          <tr>
+            <td><b>Guntur</b></td>
+            <td>:</td>
+            <td>“Inggih, Bu, kula nyuwun pangapunten”</td>
+          </tr>
+        </tbody>
+        </table>
+        
+    </div>
+    <div *ngFor="let quiz of quizzes4">
+      <h6 class="soal">{{ quiz.question }}</h6>
+      <ul>
+        <li *ngFor="let option of quiz.options" style="list-style: none; margin-left: 13px;">
+          <label [ngClass]="{
+            'correct-answer': option === quiz.answer && showExplanation && (option === userAnswers[quiz.question]),
+            'wrong-answer': option === userAnswers[quiz.question] && showExplanation && (option !== quiz.answer)
+          }">
+            <input
+              type="radio"
+              name="{{ quiz.question }}"
+              [value]="option"
+              (change)="selectOption(quiz.question, option)"
+              [disabled]="showExplanation"
+              [checked]="option === userAnswers[quiz.question]"
+            >
+            {{ option }}
+          </label>
+        </li>
+      </ul>
+      <div class="pembahasan col-md-10" *ngIf="showExplanation" >
+        <p>
+          <b>
+            Jawaban :
+          </b> {{quiz.answer}}
+        </p>
+        <p >
+          <b>Pembahasan :</b>
+          <br>
+          {{ quiz.explanation }}
+        </p>
+      </div>
+    </div>
+    <hr>
+
+ <!-- Tombol Submit -->
+ <div class="container-form-btn">
+  <button class="button-75" role="button" (click)="submitQuiz()" [disabled]="showExplanation" >Submit</button>
+  <button class="button-75" role="button"  (click)="resetQuiz()" [disabled]="!showExplanation"> <span class="text">Reset</span></button>
+ </div>
+ 
+ 
+ 
+ <!-- Menampilkan nilai akhir -->
+ <div *ngIf="showExplanation" class="skor">
+   <h3>Nilai Anda: <br>{{ score }}/{{ quizzes.length + quizzes2.length + quizzes3.length + quizzes4.length }}</h3>
+ 
+ </div>
+
+ <div class="container-form-btn">
+    <button class="button-53" role="button" routerLink="/uraian2">Selanjutnya ></button>
+ </div>
+
+
+
+    </div>
+    </body>
+</html>

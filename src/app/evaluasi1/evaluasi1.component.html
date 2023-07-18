@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uraian</title>
+</head>
+<body>
+    <div class="container">
+        <hr>
+      <!-- 1-3 -->
+      <div class="col-md-12 text-body-emphasis">
+        <h6>
+            Rungakna teks pacelathon iki! 
+        </h6>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KE2G95BPbYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div> 
+      
+      <div class="quiz">
+            <div *ngFor="let question of quizQuestions; let i = index">
+            <!-- Tampilkan pertanyaan -->
+                <div class="question">
+                    <h6>{{ question.question }}</h6>
+                </div>
+                <div class="answer">
+                    <textarea [(ngModel)]="userAnswers[i]" rows="3" cols="60"></textarea>
+                </div>
+                <div class="explanation col-md-10" *ngIf="showExplanation">
+                    <p>
+                        <b>Jawaban:</b> {{ question.answer }}
+                      </p>
+                
+                      
+                  </div>
+             </div>
+    </div>
+      </div>
+      <div class="container-form-btn">
+        <button class="button-75" role="button" (click)="calculateFinalScore()" [disabled]="showExplanation" >Submit</button>
+        <button class="button-75" role="button" (click)="resetQuiz()" [disabled]="!showExplanation" >Reset</button>
+      
+       </div>
+       <div *ngIf="showFinalScore">
+        <h3 class="skor">Nilai Anda: {{ finalScore }}</h3>
+        </div>
+</body>
+</html>

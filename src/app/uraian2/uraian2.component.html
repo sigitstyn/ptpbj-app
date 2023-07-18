@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uraian</title>
+</head>
+<body>
+    <div class="container">
+        <hr>
+      <!-- 1-3 -->
+      <div class="col-md-12 text-body-emphasis">
+        <h6>
+          Wacanen teks pacelathon iki!
+        </h6>
+        <p class="col-md-9 text-align text-body-emphasis"> 
+            Saben dina Minggu, Galih menyang daleme mbah kakung. Pancen omahe Galih ora adoh saka daleme mbah kakung. Biyasane, nalika Galih arep sowan daleme mbah kakung mesthi pamit dhisik marang ibune. Sawise ngerti yen mbah kakunge ngingu iwak koi, Galih kerep ing daleme simbah. Dheweke mulih sekolah bablas menyang daleme mbah kakung. Ibune Galih bingung goleki Galih kang durung mulih saka sekolahane. Nalika nyoba digoleki ing daleme mbah kakung, pranyata Galih lagi makani iwak koi.  
+        </p>
+      </div> 
+      <div class="conversation text-body-emphasis col-md-8">
+      <table >
+      <tbody>
+      <tr>
+      <td width="120px"><b>Ibu</b></td>
+      <td>:</td>
+      <td>“Galih… jebul mulih sekolah bablas neng daleme mbah kakung ta, Nang?”</td>
+      </tr>
+      <tr>
+      <td><b>Galih</b></td>
+      <td>:</td>
+      <td>“Inggih, Bu, lha kula remen ningali ulam koi menika, Bu.” (wangsulane Galih
+        kanthi ajrih)
+        
+        </td>
+      </tr> 
+      <tr>
+      <td><b>Ibu</b></td>
+      <td>:</td>
+      <td>“Nanging yen mulih sekolah ya pamitan dhisik ta yen arep neng daleme mbah
+        kakung, dadi ibu ora bingung nggoleki.”
+        
+        </td>
+      </tr>
+      <tr>
+        <td><b>Galih</b></td>
+        <td>:</td>
+        <td>“Inggih Bu, nyuwun pangapunten, boten kula ambali malih.”
+          
+          </td>
+      </tr>
+      <tr>
+        <td><b>Ibu</b></td>
+        <td>:</td>
+        <td>
+            “Iya, ora papa. Ya wis ayo mulih dhisik sesuk mrene meneh.”
+          </td>
+      </tr>
+      <tr>
+        <td><b>Galih</b></td>
+        <td>:</td>
+        <td>
+            “Inggih, Bu.”
+          </td>
+      </tr>
+      <tr>
+        <td><b>Ibu</b></td>
+        <td>:</td>
+        <td>
+            “Pamit dhisik karo mbah kakung.”
+          </td>
+      </tr>
+      <tr>
+        <td><b>Galih</b></td>
+        <td>:</td>
+        <td>
+            “Mbah, Galih pamit rumiyin nggih, ngenjang Galih mriki malih.”
+          </td>
+      </tr>
+      <tr>
+        <td><b>Mbah Kakung</b></td>
+        <td>:</td>
+        <td>
+            “Iya cah bagus. Sing ngati-ati, ya.”
+          </td>
+      </tr>
+      <tr>
+        <td><b>Galih</b></td>
+        <td>:</td>
+        <td>
+            “Inggih, Mbah.”
+          </td>
+      </tr>
+      </tbody>
+      </table>
+      
+      
+      <div class="col-md-12 text-body-emphasis">
+      <h6 class="A">
+      B.	Sawise maca teks pacelathon ing dhuwur, wangsulana pitakon-pitakon ing ngisor iki kanthi pratitis!
+      </h6>
+      
+      </div> 
+      </div>
+      <div class="quiz">
+            <div *ngFor="let question of quizQuestions; let i = index">
+            <!-- Tampilkan pertanyaan -->
+                <div class="question">
+                    <h6>{{ question.question }}</h6>
+                </div>
+                <div class="answer">
+                    <textarea [(ngModel)]="userAnswers[i]" rows="3" cols="60"></textarea>
+                </div>
+                <div class="explanation col-md-10" *ngIf="showExplanation">
+                    <p>
+                        <b>Jawaban:</b> {{ question.answer }}
+                      </p>
+                
+                      <p>
+                        <b>Pembahasan:</b>
+                        <br>
+                        {{ question.explanation }}
+                      </p>
+                  </div>
+             </div>
+    </div>
+      </div>
+      <div class="container-form-btn">
+        <button class="button-75" role="button" (click)="calculateFinalScore()" [disabled]="showExplanation" >Submit</button>
+        <button class="button-75" role="button" (click)="resetQuiz()" [disabled]="!showExplanation" >Reset</button>
+      
+       </div>
+       <div *ngIf="showFinalScore">
+        <h3 class="skor">Nilai Anda: {{ finalScore }}</h3>
+        </div>
+       
+      
+       <div class="container-form-btn">
+          <button class="button-53" role="button" routerLink="/gladhen2"> < Sebelumnya </button>
+       </div>
+</body>
+</html>

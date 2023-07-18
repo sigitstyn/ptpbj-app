@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+          background-color: lightgray; /* Ganti warna latar belakang sesuai keinginan Anda */
+      }
+  
+      .container {
+          background-color: white; /* Ganti warna latar belakang sesuai keinginan Anda */
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 class="display-6 p-md-4 mb-4 rounded text-body-emphasis bg-body-secondary text-center">Evaluasi</h3>
+            <hr>
+      <!-- 1-3 -->
+      <div class="col-md-12 text-body-emphasis">
+            <h6>
+              Wacanen teks pacelathon iki!
+            </h6>
+            <p class="col-md-7 text-align text-body-emphasis"> 
+              Metu saka omah, Tian mandeg neng ngarep lawang karo namatake langit. Awang-awange katon mendhung, Tian nuli mlebu ngomah meneh. Ibune mundhut pirsa. 
+            </p>
+      </div> 
+  <div class="conversation text-body-emphasis col-md-8">
+    <table >
+      <tbody>
+        <tr>
+          <td width="70px"><b>Ibu</b></td>
+          <td>:</td>
+          <td>“Ana apa ta, Yan, apa ana sing keri?”</td>
+        </tr>
+        <tr>
+          <td><b>Tian</b></td>
+          <td>:</td>
+          <td>“Boten, Bu, kula badhe murugi Yogi rumiyin, estu badhe bal-balan menapa
+            boten amargi kok ketingal mendhung.”
+            </td>
+        </tr> <tr>
+          <td><b>Ibu</b></td>
+          <td>:</td>
+          <td>“Ya kana ndang diparani.”
+            </td>
+        </tr>      </tbody>
+      </table>
+      
+        <p>
+          (Tian banjur mlaku nuju omahe Yogi.)
+        </p>
+      <table>
+        <tbody>
+        <tr>
+          <td width="70px"><b>Tian</b></td>
+          <td>:</td>
+          <td>“Kula nuwun.”</td>
+        </tr>
+        <tr>
+          <td><b>Pak Yadi</b></td>
+          <td>:</td>
+          <td>“Mangga, eh… Tian. Goleki Yogi?”
+            </td>
+        </tr>
+        <tr>
+          <td><b>Tian</b></td>
+          <td>:</td>
+          <td>“Inggih, Pak. Yogi sampun bidhal menapa dereng, nggih, Pak?” </td>
+        </tr>
+        <tr>
+          <td><b>Pak Yadi</b></td>
+          <td>:</td>
+          <td>“Durung. Sik takceluke, mrene lungguha.” </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      (Pak Yadi mlebet daleme)
+    </p>
+  <table>
+    <tbody>
+    <tr>
+      <td width="70px"><b>Yogi</b></td>
+      <td>:</td>
+      <td>“Ana apa, Yan?”</td>
+    </tr>
+    <tr>
+      <td><b>Tian</b></td>
+      <td>:</td>
+      <td>“Iki sida arep bal-balan apa ora? Langite kok katon mendhung.”</td>
+    </tr>
+    <tr>
+      <td><b>Yogi</b></td>
+      <td>:</td>
+      <td>“Ya tetep bal-balan ta, yen udan ya tetep main. Kanggo wong bal-balan, udan kuwi udu pantangan, wis biyasa.”
+        </td>
+    </tr>
+    <tr>
+      <td><b>Tian</b></td>
+      <td>:</td>
+      <td> “Yen ngono tak mulih dhisik njupuk sepatu. Mengko tak njujug nuju lapangan."</td>
+    </tr>
+    <tr>
+      <td><b>Yogi</b></td>
+      <td>:</td>
+      <td>“Ya, kowe mangkat tenan lho, Yan.”
+        </td>
+    </tr>
+    <tr>
+      <td><b>Tian</b></td>
+      <td>:</td>
+      <td> “Iya, bar njupuk sepatu aku langsung mangkat. Ya wis tak pamit dhisik.”</td>
+    </tr>
+    <tr>
+      <td><b>Yogi</b></td>
+      <td>:</td>
+      <td>“Ya, ati-ati.”
+        </td>
+    </tr>
+  </tbody>
+</table>
+<div class="col-md-12 text-body-emphasis">
+  <h6>
+    Wangsulana pitakon-pitakon ing ngisor!
+  </h6>
+  
+</div> 
+  </div>
+    <div class="quiz">
+        <div *ngFor="let question of quizQuestions; let i = index">
+          <!-- Tampilkan pertanyaan -->
+          <div class="question">
+            <h6>{{ question.question }}</h6>
+          </div>
+          <div class="answer">
+            <textarea [(ngModel)]="userAnswers[i]" rows="5" cols="70"></textarea>
+          </div>
+        </div>
+
+        <!-- Tombol Submit -->
+        <div class="container-form-btn">
+          <button class="button-75" role="button" (click)="calculateFinalScore()" [disabled]="showExplanation" >Submit</button>
+          <button class="button-75" role="button" (click)="resetQuiz()" [disabled]="!showExplanation" >Reset</button>
+        
+         </div>
+         <div *ngIf="showFinalScore">
+          <h3 class="skor">Nilai Anda: {{ finalScore }}</h3>
+          </div>
+    </div>
+  </div>
+  
+</body>
+</html>
