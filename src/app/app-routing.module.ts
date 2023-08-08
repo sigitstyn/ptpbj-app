@@ -14,7 +14,7 @@ import { JenisRagamComponent } from './jenis-ragam/jenis-ragam.component';
 import { MragakakeComponent } from './mragakake/mragakake.component';
 import { GlosariumComponent } from './glosarium/glosarium.component';
 const routes: Routes = [
-  {path: 'pengertian-web', component: PengertianWebComponent},
+  {path: '', component: PengertianWebComponent},
   {path: 'gladhen1', component: Gladhen1Component},
   {path: 'gladhen2', component: Gladhen2Component},
   {path: 'evaluasi1', component: Evaluasi1Component},
