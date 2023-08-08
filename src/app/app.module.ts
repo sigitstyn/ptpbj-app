@@ -20,6 +20,12 @@ import { Uraian1Component } from './uraian1/uraian1.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CaraNulisComponent } from './cara-nulis/cara-nulis.component';
+import { JenisRagamComponent } from './jenis-ragam/jenis-ragam.component';
+import { Gladhen3Component } from './gladhen3/gladhen3.component';
+import { Evaluasi3Component } from './evaluasi3/evaluasi3.component';
+import { MragakakeComponent } from './mragakake/mragakake.component';
+import { GlosariumComponent } from './glosarium/glosarium.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +36,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     Evaluasi2Component,
     Uraian2Component,
     Uraian1Component,
+    CaraNulisComponent,
+    JenisRagamComponent,
+    Gladhen3Component,
+    Evaluasi3Component,
+    MragakakeComponent,
+    GlosariumComponent,
   ],
   imports: [
     BrowserModule,

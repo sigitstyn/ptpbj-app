@@ -14,7 +14,7 @@ export class Evaluasi1Component  {
   quizQuestions = [
     {
       question: "1.	Apa bab kang njalari Lina kerinan?",
-      answer: "Bab kang njalari Lina kerinan yaiku bengi kuwi Lina nyumet ontel kanggo nggusah lemut nanging dheweke malah watuk lan ora bisa turu.",
+      answer: "bengi kuwi Lina nyumet ontel kanggo nggusah lemut nanging dheweke malah watuk lan ora bisa turu.",
  
     },
     {
@@ -24,12 +24,12 @@ export class Evaluasi1Component  {
     },
     {
       question: "3.	Ana ing ngendi wae papan panggonan pacelathon kuwi?",
-      answer: "Papan panggonan kang ana ing pacelathon kuwi yaiku kamar lan pawon",
+      answer: "kamar lan pawon",
    
     },
     {
       question: "4.	Apa isi teks pacelathon ing dhuwur?",
-      answer: "Isi pacelathon ing dhuwur yaiku esuk kuwi Lina urung ana ing panggonane sarapan, mula Mila banjur marani Lina ing kamare, jebul Lina durung tangi amarga wingi mbengi dheweke nyumet ontel kang marai dheweke watuk lan ora bisa turu. ",
+      answer: "esuk kuwi Lina urung ana ing panggonane sarapan, mula Mila banjur marani Lina ing kamare, jebul Lina durung tangi amarga wingi mbengi dheweke nyumet ontel kang marai dheweke watuk lan ora bisa turu. ",
       
     },
     {

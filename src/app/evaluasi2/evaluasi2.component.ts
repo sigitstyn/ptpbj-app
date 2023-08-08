@@ -13,23 +13,23 @@ export class Evaluasi2Component {
   quizQuestions = [
     {
       question: "1. Apa bab kang njalari Tian mara ing omahe Yogi?",
-      answer: "Jawaban benar"
+      answer: "dheweke arep mesthekake marang Yogi sida bal-balan apa ora amarga langite katon mendhung"
     },
     {
       question: "2. Kepriye watake paraga teks pacelathon ing dhuwur?",
-      answer: "Jawaban benar"
+      answer: "Tian		: sopan, sumelang Yogi		: kendel, ora gampang percaya Pak Yadi	: grapyak Ibu 		: preduli"
     },
     {
       question: "3. Apa isi teks pacelathon ing dhuwur?",
-      answer: "Jawaban benar"
+      answer: "Tian pamit marang ibune arep neng omahe Yogi takon sida bal-balan apa ora amarga mendhung. Satekane ing omahe Yogi, dheweke ngomong yen tetep bal-balan"
     },
     {
       question: "4. Apa dudutan kang bisa dijupuk saka teks pacelathon ing dhuwur?",
-      answer: "Jawaban benar"
+      answer: "kanggo wong bal-balan yen wayahe main kudu tetep main sanadyan udan, amarga udan kuwi wis biyasa lan udu alangan kanggo bal-balan"
     },
     {
       question: "5. Apa pitutur kang bisa dijupuk saka teks pacelathon ing dhuwur?",
-      answer: "Jawaban benar"
+      answer: "Kita kudu netepi janji kang wis dimupakati"
     }
   ];
 

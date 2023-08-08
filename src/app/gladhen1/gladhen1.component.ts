@@ -13,11 +13,11 @@ export class Gladhen1Component  {
   quizzes: Quiz[] = [
     {
       question: '1.	Bab kang njalari kadadeyane pacelathon ing dhuwur yaiku …',
-      options: ['a.	Dadi pelajar kuwi kudu tangi gasik', 
+      options: ['a.	Wit klapa kang disebut wit sewu kagunan', 
                 'b.	Kagunaane perangan-perangan wit klapa', 
                 'c.	Saliyane woh klapa, perangan liyane uga bisa digunakake', 
                 'd.	Fifi takon marang kancane gayut klapa'],
-      answer: 'a.	Dadi pelajar kuwi kudu tangi gasik',
+      answer: 'a.	Wit klapa kang disebut wit sewu kagunan',
       explanation: 'Ana ing kono Fifi takon marang Hana tegese wit klapa disebut wit sewu kagunan, banjur Hana nerangake alesane wit mau disebut wit sewu kagunan. Mula bab kang njalari pacelathon ing dhuwur yaiku wit klapa kang disebut wit sewu kagunan.'
     },
     {

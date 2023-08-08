@@ -73,7 +73,7 @@ export class Gladhen2Component{
       explanation: 'Ana telung cara kang digunakake kanggo mangerteni isi pacelathon, kayata nggatekake pacelathon; nulis bab kang wigati kaya bab kang lagi diomongake, paraga ing pacelathon, lan papan panggonan kang ana ing pacelathon; lan njupuk dudutan saka isi pacelathon. Ing pacelathon iki bab kang lagi diomongake yaiku sebab Bu Tina lagi gerah neng rumah sakit, mula kelas VII A didhawuhi nggarap buku paket supaya pasinaon basa Jawa tetep mlaku. Paraga kang nglakokake pacelathon yaiku Aldo, Ria, lan Doni sing kalebu siswa kelas VII A. Papan panggonan pacelathon kuwi ana ing kelas. Saka bab-bab kang wigati mau bisa dijupuk dudutan yen kelas VII A didhawuhi nggarap buku paket amarga gurune ora rawuh.'
     },
     {
-      question: '7.	Saka pacelathon ing dhuwur, kang ndhawuhi kelas VII A nggarap buku paket yaiku ',
+      question: '7.	Saka pacelathon ing dhuwur, kang ndhawuhi kelas VII A nggarap buku paket yaiku... ',
       options: ['a.	Guru', 
                 'b.	Aldo', 
                 'c.	Bu Tina', 

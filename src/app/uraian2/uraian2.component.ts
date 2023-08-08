@@ -25,7 +25,7 @@ export class Uraian2Component  {
     {
       question: "3.	Ibune Galih bingung amarga … ",
       answer: "Galih durung mulih sekolah",
-      explanation: "Saka ukrara “Ibune Galih bingung goleki Galih kang durung mulih saka sekolahane.”, nandakake yen ibune Galih bingung merga Galih durung mulih saka sekolahane."
+      explanation: "Saka ukara “Ibune Galih bingung goleki Galih kang durung mulih saka sekolahane.”, nandakake yen ibune Galih bingung merga Galih durung mulih saka sekolahane."
     },
     {
       question: "4.	Welinge ibu marang Galih yaiku sawise mulih sekolah kudu… ",
